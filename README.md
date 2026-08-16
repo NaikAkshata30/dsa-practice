@@ -1,54 +1,57 @@
-# DSA Practice
+<div align="center">
 
-A growing collection of my Data Structures and Algorithms practice problems, solved in Python while developing my competitive programming skills through Codeforces and the TLE Eliminators CP-31 Sheet.
+# Data Structures & Algorithms
 
-[Codeforces Profile](https://codeforces.com/profile/ashcodes._) · [TLE Eliminators CP-31 Sheet](https://www.tle-eliminators.com/cp-sheet)
+My growing collection of Codeforces solutions while learning competitive programming with the TLE Eliminators CP-31 Sheet.
 
----
+[![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
+[![Codeforces](https://img.shields.io/badge/Codeforces-ashcodes._-1F8ACB?style=flat&logo=codeforces&logoColor=white)](https://codeforces.com/profile/ashcodes._)
+[![CP-31 Sheet](https://img.shields.io/badge/Practice-CP--31-2EA44F?style=flat)](https://www.tle-eliminators.com/cp-sheet)
 
-## Journey Snapshot
+</div>
 
-<!-- AUTO:SNAPSHOT:START -->
-| Problems Solved | Practice Level | Language |
-|:---:|:---:|:---:|
-| **7** | **800** | **Python** |
-<!-- AUTO:SNAPSHOT:END -->
+## About
 
----
+I am building consistency in competitive programming by solving Codeforces problems and strengthening my problem-solving fundamentals. Solutions are organised by problem rating and written in Python for quick revision and practice.
 
-## Problems
+- **Codeforces:** [ashcodes._](https://codeforces.com/profile/ashcodes._)
+- **Practice Sheet:** [TLE Eliminators CP-31](https://www.tle-eliminators.com/cp-sheet)
 
-### 800 Level
+## Progress
 
-<!-- AUTO:PROBLEMS:START -->
+### 800 Rated
+
 | Problem | Solution |
 |---|:---:|
-| Cover in Water — Cover in Water | [Python](800-level/Cover in Water.py) |
-| Game with Integers — Game with Integers | [Python](800-level/Game with Integers.py) |
-| Halloumi Boxes — Halloumi Boxes | [Python](800-level/Halloumi Boxes.py) |
-| Helpful Maths — Helpful Maths | [Python](800-level/Helpful Maths.py) |
-| Jagged Swaps — Jagged Swaps | [Python](800-level/Jagged Swaps.py) |
-| Line Trip — Line Trip | [Python](800-level/Line Trip.py) |
-| Way Too Long — Way Too Long | [Python](800-level/Way Too Long.py) |
-<!-- AUTO:PROBLEMS:END -->
+| [1903A — Halloumi Boxes](https://codeforces.com/problemset/problem/1903/A) | [View Solution](800-level/Halloumi%20Boxes.py) |
+| [339A — Helpful Maths](https://codeforces.com/problemset/problem/339/A) | [View Solution](800-level/Helpful%20Maths.py) |
+| [1901A — Line Trip](https://codeforces.com/problemset/problem/1901/A) | [View Solution](800-level/Line%20Trip.py) |
+| [71A — Way Too Long Words](https://codeforces.com/problemset/problem/71/A) | [View Solution](800-level/Way%20Too%20Long.py) |
+| [1899A — Game with Integers](https://codeforces.com/problemset/problem/1899/A) | [View Solution](800-level/Game%20with%20Integers.py) |
+| [1896A — Jagged Swaps](https://codeforces.com/problemset/problem/1896/A) | [View Solution](800-level/Jagged%20Swaps.py) |
+| [1900A — Cover in Water](https://codeforces.com/problemset/problem/1900/A) | [View Solution](800-level/Cover%20in%20Water.py) |
 
----
+New rating sections will be added as I progress through higher difficulty levels.
 
 ## Codeforces Activity
 
+<div align="center">
+
 [![Codeforces Activity](assets/daily-activity.svg)](https://codeforces.com/profile/ashcodes._)
 
-Automatically generated from my public Codeforces submissions.
+</div>
 
----
+The activity heatmap is generated automatically from my public Codeforces submissions. Clicking the graph opens my Codeforces profile.
 
-## Codeforces Analytics
+### Codeforces Analytics
+
+<div align="center">
 
 [![Codeforces Analytics](assets/codeforces-analytics.svg)](https://codeforces.com/profile/ashcodes._)
 
-Automatically generated from Codeforces profile and submission data.
+</div>
 
-The dashboard tracks:
+The analytics dashboard is generated automatically from Codeforces data and tracks:
 
 - Problems solved
 - Submission activity
@@ -58,8 +61,6 @@ The dashboard tracks:
 
 ---
 
-## Progress
-
-This repository documents my competitive programming journey as I solve problems, build consistency, and progress through higher Codeforces difficulty levels.
-
-New solutions, statistics, activity, and analytics are updated automatically.
+<p align="center">
+Currently learning, solving, and improving one problem at a time.
+</p>
