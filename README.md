@@ -1,5 +1,3 @@
-<div align="center">
-
 # Data Structures & Algorithms
 
 A personal record of my competitive programming journey, where I solve Codeforces problems in Python and build consistency through structured practice.
