@@ -17,13 +17,13 @@
 <text x="68" y="158" font-size="24" font-weight="600" fill="#58a6ff" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Overview</text>
 <text x="70" y="215" font-size="14" font-weight="700" fill="#3fb950" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">●</text>
 <text x="95" y="215" font-size="15" font-weight="400" fill="#8b949e" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Problems Solved:</text>
-<text x="370" y="215" font-size="16" font-weight="600" fill="#58a6ff" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">7</text>
+<text x="370" y="215" font-size="16" font-weight="600" fill="#58a6ff" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">8</text>
 <text x="70" y="258" font-size="14" font-weight="700" fill="#ff7b72" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">●</text>
 <text x="95" y="258" font-size="15" font-weight="400" fill="#8b949e" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Current Streak:</text>
-<text x="370" y="258" font-size="16" font-weight="600" fill="#58a6ff" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">3 days</text>
+<text x="370" y="258" font-size="16" font-weight="600" fill="#58a6ff" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">4 days</text>
 <text x="70" y="301" font-size="14" font-weight="700" fill="#a371f7" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">●</text>
 <text x="95" y="301" font-size="15" font-weight="400" fill="#8b949e" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Max Streak:</text>
-<text x="370" y="301" font-size="16" font-weight="600" fill="#58a6ff" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">3 days</text>
+<text x="370" y="301" font-size="16" font-weight="600" fill="#58a6ff" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">4 days</text>
 <text x="70" y="344" font-size="14" font-weight="700" fill="#f2cc60" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">●</text>
 <text x="95" y="344" font-size="15" font-weight="400" fill="#8b949e" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Rating:</text>
 <text x="370" y="344" font-size="16" font-weight="600" fill="#58a6ff" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Unrated</text>
@@ -52,81 +52,81 @@
 <text x="783" y="254.0" font-size="10" font-weight="400" fill="#8b949e" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">4</text>
 <line x1="795" y1="205.0" x2="1395" y2="205.0" stroke="#21262d" stroke-width="1"/>
 <text x="783" y="210.0" font-size="10" font-weight="400" fill="#8b949e" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">4</text>
-<rect x="795.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 18, 2026</title></rect>
-<rect x="815.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 19, 2026</title></rect>
-<rect x="835.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 20, 2026</title></rect>
-<rect x="855.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 21, 2026</title></rect>
-<rect x="875.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 22, 2026</title></rect>
-<rect x="895.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 23, 2026</title></rect>
-<rect x="915.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 24, 2026</title></rect>
-<rect x="935.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 25, 2026</title></rect>
-<rect x="955.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 26, 2026</title></rect>
-<rect x="975.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 27, 2026</title></rect>
-<rect x="995.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 28, 2026</title></rect>
-<rect x="1015.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 29, 2026</title></rect>
-<rect x="1035.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 30, 2026</title></rect>
-<rect x="1055.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 31, 2026</title></rect>
-<rect x="1075.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 01, 2026</title></rect>
-<rect x="1095.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 02, 2026</title></rect>
-<rect x="1115.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 03, 2026</title></rect>
-<rect x="1135.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 04, 2026</title></rect>
-<rect x="1155.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 05, 2026</title></rect>
-<rect x="1175.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 06, 2026</title></rect>
-<rect x="1195.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 07, 2026</title></rect>
-<rect x="1215.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 08, 2026</title></rect>
-<rect x="1235.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 09, 2026</title></rect>
-<rect x="1255.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 10, 2026</title></rect>
-<rect x="1275.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 11, 2026</title></rect>
-<rect x="1295.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 12, 2026</title></rect>
-<rect x="1315.00" y="315.00" width="17.00" height="110.00" rx="3" fill="#6e40c9"><title>2 problem(s) solved on Aug 13, 2026</title></rect>
-<rect x="1335.00" y="370.00" width="17.00" height="55.00" rx="3" fill="#6e40c9"><title>1 problem(s) solved on Aug 14, 2026</title></rect>
-<rect x="1355.00" y="205.00" width="17.00" height="220.00" rx="3" fill="#6e40c9"><title>4 problem(s) solved on Aug 15, 2026</title></rect>
-<rect x="1375.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 16, 2026</title></rect>
-<text x="803.5" y="453" font-size="10" font-weight="400" fill="#8b949e" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Jul 18</text>
-<text x="943.5" y="453" font-size="10" font-weight="400" fill="#8b949e" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Jul 25</text>
-<text x="1083.5" y="453" font-size="10" font-weight="400" fill="#8b949e" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Aug 01</text>
-<text x="1223.5" y="453" font-size="10" font-weight="400" fill="#8b949e" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Aug 08</text>
-<text x="1383.5" y="453" font-size="10" font-weight="400" fill="#8b949e" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Aug 16</text>
+<rect x="795.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 19, 2026</title></rect>
+<rect x="815.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 20, 2026</title></rect>
+<rect x="835.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 21, 2026</title></rect>
+<rect x="855.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 22, 2026</title></rect>
+<rect x="875.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 23, 2026</title></rect>
+<rect x="895.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 24, 2026</title></rect>
+<rect x="915.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 25, 2026</title></rect>
+<rect x="935.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 26, 2026</title></rect>
+<rect x="955.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 27, 2026</title></rect>
+<rect x="975.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 28, 2026</title></rect>
+<rect x="995.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 29, 2026</title></rect>
+<rect x="1015.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 30, 2026</title></rect>
+<rect x="1035.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Jul 31, 2026</title></rect>
+<rect x="1055.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 01, 2026</title></rect>
+<rect x="1075.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 02, 2026</title></rect>
+<rect x="1095.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 03, 2026</title></rect>
+<rect x="1115.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 04, 2026</title></rect>
+<rect x="1135.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 05, 2026</title></rect>
+<rect x="1155.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 06, 2026</title></rect>
+<rect x="1175.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 07, 2026</title></rect>
+<rect x="1195.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 08, 2026</title></rect>
+<rect x="1215.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 09, 2026</title></rect>
+<rect x="1235.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 10, 2026</title></rect>
+<rect x="1255.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 11, 2026</title></rect>
+<rect x="1275.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 12, 2026</title></rect>
+<rect x="1295.00" y="315.00" width="17.00" height="110.00" rx="3" fill="#6e40c9"><title>2 problem(s) solved on Aug 13, 2026</title></rect>
+<rect x="1315.00" y="370.00" width="17.00" height="55.00" rx="3" fill="#6e40c9"><title>1 problem(s) solved on Aug 14, 2026</title></rect>
+<rect x="1335.00" y="205.00" width="17.00" height="220.00" rx="3" fill="#6e40c9"><title>4 problem(s) solved on Aug 15, 2026</title></rect>
+<rect x="1355.00" y="370.00" width="17.00" height="55.00" rx="3" fill="#6e40c9"><title>1 problem(s) solved on Aug 16, 2026</title></rect>
+<rect x="1375.00" y="425.00" width="17.00" height="2.00" rx="3" fill="#6e40c9"><title>0 problem(s) solved on Aug 17, 2026</title></rect>
+<text x="803.5" y="453" font-size="10" font-weight="400" fill="#8b949e" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Jul 19</text>
+<text x="943.5" y="453" font-size="10" font-weight="400" fill="#8b949e" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Jul 26</text>
+<text x="1083.5" y="453" font-size="10" font-weight="400" fill="#8b949e" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Aug 02</text>
+<text x="1223.5" y="453" font-size="10" font-weight="400" fill="#8b949e" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Aug 09</text>
+<text x="1383.5" y="453" font-size="10" font-weight="400" fill="#8b949e" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Aug 17</text>
 <text x="1095.0" y="480" font-size="12" font-weight="400" fill="#8b949e" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Last 30 Days</text>
 <rect x="40" y="515" width="660" height="385" rx="14" fill="#0d1117" stroke="#30363d" stroke-width="1.2"/>
 <text x="68" y="563" font-size="24" font-weight="600" fill="#58a6ff" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Problem Patterns</text>
 <rect x="65" y="590" width="185" height="105" rx="10" fill="#161b22" stroke="#30363d"/>
 <text x="80" y="622" font-size="15" font-weight="500" fill="#c9d1d9" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Greedy</text>
 <text x="80" y="656" font-size="23" font-weight="600" fill="#3fb950" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">4</text>
-<text x="235" y="656" font-size="12" font-weight="400" fill="#8b949e" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">57.1%</text>
+<text x="235" y="656" font-size="12" font-weight="400" fill="#8b949e" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">50.0%</text>
 <rect x="80" y="672" width="155" height="7" rx="3.5" fill="#21262d"/>
-<rect x="80" y="672" width="88.57" height="7" rx="3.5" fill="#3fb950"/>
+<rect x="80" y="672" width="77.50" height="7" rx="3.5" fill="#3fb950"/>
 <rect x="265" y="590" width="185" height="105" rx="10" fill="#161b22" stroke="#30363d"/>
 <text x="280" y="622" font-size="15" font-weight="500" fill="#c9d1d9" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Sortings</text>
 <text x="280" y="656" font-size="23" font-weight="600" fill="#f2cc60" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">3</text>
-<text x="435" y="656" font-size="12" font-weight="400" fill="#8b949e" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">42.9%</text>
+<text x="435" y="656" font-size="12" font-weight="400" fill="#8b949e" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">37.5%</text>
 <rect x="280" y="672" width="155" height="7" rx="3.5" fill="#21262d"/>
-<rect x="280" y="672" width="66.43" height="7" rx="3.5" fill="#f2cc60"/>
+<rect x="280" y="672" width="58.12" height="7" rx="3.5" fill="#f2cc60"/>
 <rect x="465" y="590" width="185" height="105" rx="10" fill="#161b22" stroke="#30363d"/>
 <text x="480" y="622" font-size="15" font-weight="500" fill="#c9d1d9" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Strings</text>
 <text x="480" y="656" font-size="23" font-weight="600" fill="#58a6ff" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">3</text>
-<text x="635" y="656" font-size="12" font-weight="400" fill="#8b949e" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">42.9%</text>
+<text x="635" y="656" font-size="12" font-weight="400" fill="#8b949e" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">37.5%</text>
 <rect x="480" y="672" width="155" height="7" rx="3.5" fill="#21262d"/>
-<rect x="480" y="672" width="66.43" height="7" rx="3.5" fill="#58a6ff"/>
+<rect x="480" y="672" width="58.12" height="7" rx="3.5" fill="#58a6ff"/>
 <rect x="65" y="710" width="185" height="105" rx="10" fill="#161b22" stroke="#30363d"/>
 <text x="80" y="742" font-size="15" font-weight="500" fill="#c9d1d9" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Implementation</text>
 <text x="80" y="776" font-size="23" font-weight="600" fill="#a371f7" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">2</text>
-<text x="235" y="776" font-size="12" font-weight="400" fill="#8b949e" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">28.6%</text>
+<text x="235" y="776" font-size="12" font-weight="400" fill="#8b949e" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">25.0%</text>
 <rect x="80" y="792" width="155" height="7" rx="3.5" fill="#21262d"/>
-<rect x="80" y="792" width="44.29" height="7" rx="3.5" fill="#a371f7"/>
+<rect x="80" y="792" width="38.75" height="7" rx="3.5" fill="#a371f7"/>
 <rect x="265" y="710" width="185" height="105" rx="10" fill="#161b22" stroke="#30363d"/>
 <text x="280" y="742" font-size="15" font-weight="500" fill="#c9d1d9" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Math</text>
 <text x="280" y="776" font-size="23" font-weight="600" fill="#ff7b72" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">2</text>
-<text x="435" y="776" font-size="12" font-weight="400" fill="#8b949e" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">28.6%</text>
+<text x="435" y="776" font-size="12" font-weight="400" fill="#8b949e" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">25.0%</text>
 <rect x="280" y="792" width="155" height="7" rx="3.5" fill="#21262d"/>
-<rect x="280" y="792" width="44.29" height="7" rx="3.5" fill="#ff7b72"/>
+<rect x="280" y="792" width="38.75" height="7" rx="3.5" fill="#ff7b72"/>
 <rect x="465" y="710" width="185" height="105" rx="10" fill="#161b22" stroke="#30363d"/>
-<text x="480" y="742" font-size="15" font-weight="500" fill="#c9d1d9" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Brute Force</text>
-<text x="480" y="776" font-size="23" font-weight="600" fill="#db61a2" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">1</text>
-<text x="635" y="776" font-size="12" font-weight="400" fill="#8b949e" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">14.3%</text>
+<text x="480" y="742" font-size="15" font-weight="500" fill="#c9d1d9" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Constructive Algorithms</text>
+<text x="480" y="776" font-size="23" font-weight="600" fill="#db61a2" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">2</text>
+<text x="635" y="776" font-size="12" font-weight="400" fill="#8b949e" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">25.0%</text>
 <rect x="480" y="792" width="155" height="7" rx="3.5" fill="#21262d"/>
-<rect x="480" y="792" width="22.14" height="7" rx="3.5" fill="#db61a2"/>
-<text x="70" y="865" font-size="13" font-weight="400" fill="#8b949e" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Total Problems: 7   •   Unique Patterns: 9</text>
+<rect x="480" y="792" width="38.75" height="7" rx="3.5" fill="#db61a2"/>
+<text x="70" y="865" font-size="13" font-weight="400" fill="#8b949e" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Total Problems: 8   •   Unique Patterns: 9</text>
 <rect x="720" y="515" width="740" height="385" rx="14" fill="#0d1117" stroke="#30363d" stroke-width="1.2"/>
 <text x="748" y="563" font-size="24" font-weight="600" fill="#58a6ff" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Difficulty Progression</text>
 <line x1="795" y1="845.0" x2="1225" y2="845.0" stroke="#21262d" stroke-width="1"/>
@@ -135,14 +135,15 @@
 <text x="783" y="727.5" font-size="10" font-weight="400" fill="#8b949e" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">800</text>
 <line x1="795" y1="600.0" x2="1225" y2="600.0" stroke="#21262d" stroke-width="1"/>
 <text x="783" y="605.0" font-size="10" font-weight="400" fill="#8b949e" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">900</text>
-<polyline points="795.0,722.5 866.7,722.5 938.3,722.5 1010.0,722.5 1081.7,722.5 1153.3,722.5 1225.0,722.5" fill="none" stroke="#58a6ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="795.0,722.5 856.4,722.5 917.9,722.5 979.3,722.5 1040.7,722.5 1102.1,722.5 1163.6,722.5 1225.0,722.5" fill="none" stroke="#58a6ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 <circle cx="795.0" cy="722.5" r="5" fill="#0d1117" stroke="#58a6ff" stroke-width="3"><title>Problem 1: 800</title></circle>
-<circle cx="866.7" cy="722.5" r="5" fill="#0d1117" stroke="#58a6ff" stroke-width="3"><title>Problem 2: 800</title></circle>
-<circle cx="938.3" cy="722.5" r="5" fill="#0d1117" stroke="#58a6ff" stroke-width="3"><title>Problem 3: 800</title></circle>
-<circle cx="1010.0" cy="722.5" r="5" fill="#0d1117" stroke="#58a6ff" stroke-width="3"><title>Problem 4: 800</title></circle>
-<circle cx="1081.7" cy="722.5" r="5" fill="#0d1117" stroke="#58a6ff" stroke-width="3"><title>Problem 5: 800</title></circle>
-<circle cx="1153.3" cy="722.5" r="5" fill="#0d1117" stroke="#58a6ff" stroke-width="3"><title>Problem 6: 800</title></circle>
-<circle cx="1225.0" cy="722.5" r="8" fill="#0d1117" stroke="#3fb950" stroke-width="3"><title>Problem 7: 800</title></circle>
+<circle cx="856.4" cy="722.5" r="5" fill="#0d1117" stroke="#58a6ff" stroke-width="3"><title>Problem 2: 800</title></circle>
+<circle cx="917.9" cy="722.5" r="5" fill="#0d1117" stroke="#58a6ff" stroke-width="3"><title>Problem 3: 800</title></circle>
+<circle cx="979.3" cy="722.5" r="5" fill="#0d1117" stroke="#58a6ff" stroke-width="3"><title>Problem 4: 800</title></circle>
+<circle cx="1040.7" cy="722.5" r="5" fill="#0d1117" stroke="#58a6ff" stroke-width="3"><title>Problem 5: 800</title></circle>
+<circle cx="1102.1" cy="722.5" r="5" fill="#0d1117" stroke="#58a6ff" stroke-width="3"><title>Problem 6: 800</title></circle>
+<circle cx="1163.6" cy="722.5" r="5" fill="#0d1117" stroke="#58a6ff" stroke-width="3"><title>Problem 7: 800</title></circle>
+<circle cx="1225.0" cy="722.5" r="8" fill="#0d1117" stroke="#3fb950" stroke-width="3"><title>Problem 8: 800</title></circle>
 <text x="1010.0" y="883" font-size="12" font-weight="400" fill="#8b949e" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Problems Solved (in order)</text>
 <rect x="1240" y="603" width="190" height="245" rx="10" fill="#161b22" stroke="#30363d"/>
 <text x="1260" y="651" font-size="12" font-weight="400" fill="#8b949e" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Highest Rating</text>
