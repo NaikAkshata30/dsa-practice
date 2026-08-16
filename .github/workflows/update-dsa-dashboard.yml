@@ -5,21 +5,18 @@ on:
     branches:
       - main
     paths:
-      - "800-level/**/*.py"
-      - "scripts/generate_activity.py"
+      - "800-level/**"
+      - "scripts/**"
       - ".github/workflows/update-dsa-dashboard.yml"
 
   schedule:
-    - cron: "30 18 * * *"
+    # Runs every day at 00:30 UTC = 06:00 AM IST
+    - cron: "30 0 * * *"
 
   workflow_dispatch:
 
 permissions:
   contents: write
-
-concurrency:
-  group: dsa-dashboard
-  cancel-in-progress: true
 
 jobs:
   update-dashboard:
@@ -34,19 +31,34 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Generate activity dashboard
-        run: python scripts/generate_activity.py
+      - name: Generate activity heatmap
+        run: |
+          python scripts/generate_activity.py
+
+      - name: Generate Codeforces analytics
+        run: |
+          python scripts/generate_dashboard.py
+
+      - name: Generate README
+        run: |
+          python scripts/generate_readme.py
+
+      - name: Check generated files
+        run: |
+          git status
+          git diff --stat
 
       - name: Commit updated dashboard
         run: |
-          if git diff --quiet -- assets/daily-activity.svg; then
-            echo "Dashboard is already up to date."
-            exit 0
-          fi
-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add assets/daily-activity.svg
-          git commit -m "Update DSA activity dashboard"
-          git push
+          git add README.md
+          git add assets/*.svg
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: update Codeforces dashboard"
+            git push
+          fi
