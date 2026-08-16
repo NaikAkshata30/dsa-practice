@@ -33,7 +33,6 @@ New rating sections will be added as I progress through higher difficulty levels
 
 </div>
 
-The activity heatmap is generated automatically from my public Codeforces submissions. Clicking the graph opens my Codeforces profile.
 
 ### Codeforces Analytics
 
@@ -43,16 +42,9 @@ The activity heatmap is generated automatically from my public Codeforces submis
 
 </div>
 
-The analytics dashboard is generated automatically from Codeforces data and tracks:
-
-- Problems solved
-- Submission activity
-- Solving streaks
-- Problem patterns
-- Difficulty progression
 
 ---
 
 <p align="center">
-Currently learning, solving, and improving one problem at a time.
+Currently learning, solving, and improving.
 </p>
