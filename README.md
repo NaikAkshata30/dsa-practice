@@ -36,22 +36,30 @@ A growing collection of my Data Structures and Algorithms practice problems, sol
 
 ## Codeforces Activity
 
-![Codeforces Activity](assets/daily-activity.svg)
+[![Codeforces Activity](assets/daily-activity.svg)](https://codeforces.com/profile/ashcodes._)
 
-Automatically generated from my Codeforces submissions.
+Automatically generated from my public Codeforces submissions.
 
 ---
 
 ## Codeforces Analytics
 
-![Codeforces Analytics](assets/codeforces-analytics.svg)
+[![Codeforces Analytics](assets/codeforces-analytics.svg)](https://codeforces.com/profile/ashcodes._)
 
 Automatically generated from Codeforces profile and submission data.
+
+The dashboard tracks:
+
+- Problems solved
+- Submission activity
+- Solving streaks
+- Problem patterns
+- Difficulty progression
 
 ---
 
 ## Progress
 
-This repository documents my competitive programming journey as I solve problems, build consistency, and progress through higher difficulty levels.
+This repository documents my competitive programming journey as I solve problems, build consistency, and progress through higher Codeforces difficulty levels.
 
 New solutions, statistics, activity, and analytics are updated automatically.
