@@ -120,19 +120,6 @@ def fetch_rating_history() -> list[dict]:
         {"handle": HANDLE},
     )
 
-
-def fetch_problemset() -> list[dict]:
-    """
-    Fetch Codeforces problem metadata.
-
-    The problemset endpoint provides problem ratings and tags.
-    """
-
-    result = api_get("problemset.problems")
-
-    return result["problems"]
-
-
 # ============================================================
 # DATA PROCESSING
 # ============================================================
@@ -253,67 +240,6 @@ def calculate_streaks(
         current -= timedelta(days=1)
 
     return current_streak, best
-
-
-def build_problem_map(
-    problems: list[dict],
-) -> dict[tuple[str, str], dict]:
-    """Map problem identity to metadata."""
-
-    return {
-        problem_key(problem): problem
-        for problem in problems
-    }
-
-
-def pattern_counts(
-    solved: list[dict],
-    problem_map: dict[tuple[str, str], dict],
-) -> Counter:
-    """
-    Count Codeforces tags across unique solved problems.
-
-    A problem contributes at most once to each tag.
-    """
-
-    counts = Counter()
-
-    for submission in solved:
-        problem = submission.get("problem", {})
-        key = problem_key(problem)
-
-        metadata = problem_map.get(key, problem)
-
-        for tag in metadata.get("tags", []):
-            counts[tag] += 1
-
-    return counts
-
-
-def difficulty_data(
-    solved: list[dict],
-    problem_map: dict[tuple[str, str], dict],
-) -> list[tuple[int, int]]:
-    """
-    Return:
-        (solve_number, problem_rating)
-
-    for every solved problem that has a rating.
-    """
-
-    result = []
-
-    for index, submission in enumerate(solved, start=1):
-        problem = submission.get("problem", {})
-        key = problem_key(problem)
-
-        metadata = problem_map.get(key, problem)
-        rating = metadata.get("rating")
-
-        if isinstance(rating, int):
-            result.append((index, rating))
-
-    return result
 
 
 def daily_activity(
@@ -730,443 +656,6 @@ def render_activity(
 
 
 # ============================================================
-# PROBLEM PATTERNS PANEL
-# ============================================================
-
-PATTERN_COLORS = [
-    "#3fb950",
-    "#f2cc60",
-    "#58a6ff",
-    "#a371f7",
-    "#ff7b72",
-    "#db61a2",
-]
-
-
-def render_patterns(
-    counts: Counter,
-    total_solved: int,
-) -> list[str]:
-
-    lines = []
-
-    x = 40
-    y = 515
-    width = 660
-    height = 385
-
-    lines.append(
-        rounded_card(
-            x,
-            y,
-            width,
-            height,
-        )
-    )
-
-    lines.append(
-        section_title(
-            x + 28,
-            y + 48,
-            "Problem Patterns",
-        )
-    )
-
-    top_patterns = counts.most_common(6)
-
-    if not top_patterns:
-        lines.append(
-            svg_text(
-                x + 30,
-                y + 110,
-                "No tagged problems available yet.",
-                size=14,
-                color="#8b949e",
-            )
-        )
-
-        return lines
-
-    card_width = 185
-    card_height = 105
-
-    positions = [
-        (x + 25, y + 75),
-        (x + 225, y + 75),
-        (x + 425, y + 75),
-        (x + 25, y + 195),
-        (x + 225, y + 195),
-        (x + 425, y + 195),
-    ]
-
-    for index, (tag, count) in enumerate(
-        top_patterns
-    ):
-
-        px, py = positions[index]
-        color = PATTERN_COLORS[
-            index % len(PATTERN_COLORS)
-        ]
-
-        lines.append(
-            f'<rect x="{px}" y="{py}" '
-            f'width="{card_width}" '
-            f'height="{card_height}" '
-            f'rx="10" '
-            f'fill="#161b22" '
-            f'stroke="#30363d"/>'
-        )
-
-        percentage = (
-            count / total_solved * 100
-            if total_solved
-            else 0
-        )
-
-        lines.append(
-            svg_text(
-                px + 15,
-                py + 32,
-                tag.title(),
-                size=15,
-                color="#c9d1d9",
-                weight=500,
-            )
-        )
-
-        lines.append(
-            svg_text(
-                px + 15,
-                py + 66,
-                count,
-                size=23,
-                color=color,
-                weight=600,
-            )
-        )
-
-        lines.append(
-            svg_text(
-                px + card_width - 15,
-                py + 66,
-                f"{percentage:.1f}%",
-                size=12,
-                color="#8b949e",
-                anchor="end",
-            )
-        )
-
-        progress_width = (
-            (card_width - 30)
-            * percentage
-            / 100
-        )
-
-        lines.append(
-            f'<rect x="{px + 15}" '
-            f'y="{py + 82}" '
-            f'width="{card_width - 30}" '
-            f'height="7" rx="3.5" '
-            f'fill="#21262d"/>'
-        )
-
-        lines.append(
-            f'<rect x="{px + 15}" '
-            f'y="{py + 82}" '
-            f'width="{progress_width:.2f}" '
-            f'height="7" rx="3.5" '
-            f'fill="{color}"/>'
-        )
-
-    unique_patterns = len(counts)
-
-    lines.append(
-        svg_text(
-            x + 30,
-            y + 350,
-            f"Total Problems: {total_solved}   •   "
-            f"Unique Patterns: {unique_patterns}",
-            size=13,
-            color="#8b949e",
-        )
-    )
-
-    return lines
-
-
-# ============================================================
-# DIFFICULTY PROGRESSION PANEL
-# ============================================================
-
-def render_difficulty(
-    difficulty: list[tuple[int, int]],
-) -> list[str]:
-
-    lines = []
-
-    x = 720
-    y = 515
-    width = 740
-    height = 385
-
-    lines.append(
-        rounded_card(
-            x,
-            y,
-            width,
-            height,
-        )
-    )
-
-    lines.append(
-        section_title(
-            x + 28,
-            y + 48,
-            "Difficulty Progression",
-        )
-    )
-
-    if not difficulty:
-
-        lines.append(
-            svg_text(
-                x + 30,
-                y + 120,
-                "Problem ratings will appear as rated problems are solved.",
-                size=14,
-                color="#8b949e",
-            )
-        )
-
-        return lines
-
-    chart_x = x + 75
-    chart_y = y + 85
-    chart_width = 430
-    chart_height = 245
-
-    ratings = [
-        rating
-        for _, rating in difficulty
-    ]
-
-    min_rating = min(ratings)
-    max_rating = max(ratings)
-
-    lower = (
-        min_rating // 100
-    ) * 100
-
-    upper = (
-        math.ceil(max_rating / 100)
-    ) * 100
-
-    if lower == upper:
-        lower -= 100
-        upper += 100
-
-    # Horizontal grid
-    tick_values = list(
-        range(
-            lower,
-            upper + 1,
-            100,
-        )
-    )
-
-    for rating in tick_values:
-
-        ratio = (
-            rating - lower
-        ) / (
-            upper - lower
-        )
-
-        gy = (
-            chart_y
-            + chart_height
-            - ratio * chart_height
-        )
-
-        lines.append(
-            f'<line x1="{chart_x}" y1="{gy}" '
-            f'x2="{chart_x + chart_width}" y2="{gy}" '
-            f'stroke="#21262d" stroke-width="1"/>'
-        )
-
-        lines.append(
-            svg_text(
-                chart_x - 12,
-                gy + 5,
-                rating,
-                size=10,
-                color="#8b949e",
-                anchor="end",
-            )
-        )
-
-    # X-axis
-    if len(difficulty) == 1:
-        x_positions = [
-            chart_x + chart_width / 2
-        ]
-    else:
-        x_positions = [
-            chart_x
-            + i * chart_width
-            / (len(difficulty) - 1)
-            for i in range(
-                len(difficulty)
-            )
-        ]
-
-    points = []
-
-    for (solve_number, rating), px in zip(
-        difficulty,
-        x_positions,
-    ):
-
-        ratio = (
-            rating - lower
-        ) / (
-            upper - lower
-        )
-
-        py = (
-            chart_y
-            + chart_height
-            - ratio * chart_height
-        )
-
-        points.append(
-            (px, py)
-        )
-
-    # Connecting line
-    if len(points) > 1:
-
-        point_string = " ".join(
-            f"{px:.1f},{py:.1f}"
-            for px, py in points
-        )
-
-        lines.append(
-            f'<polyline points="{point_string}" '
-            f'fill="none" '
-            f'stroke="#58a6ff" '
-            f'stroke-width="3" '
-            f'stroke-linecap="round" '
-            f'stroke-linejoin="round"/>'
-        )
-
-    # Points
-    for index, (
-        (solve_number, rating),
-        (px, py),
-    ) in enumerate(
-        zip(difficulty, points)
-    ):
-
-        is_latest = (
-            index == len(points) - 1
-        )
-
-        lines.append(
-            f'<circle cx="{px:.1f}" '
-            f'cy="{py:.1f}" '
-            f'r="{8 if is_latest else 5}" '
-            f'fill="#0d1117" '
-            f'stroke="{ "#3fb950" if is_latest else "#58a6ff" }" '
-            f'stroke-width="3">'
-            f'<title>Problem {solve_number}: '
-            f'{rating}</title>'
-            f'</circle>'
-        )
-
-    lines.append(
-        svg_text(
-            chart_x + chart_width / 2,
-            chart_y + chart_height + 38,
-            "Problems Solved (in order)",
-            size=12,
-            color="#8b949e",
-            anchor="middle",
-        )
-    )
-
-    # Insights card
-    card_x = x + 520
-    card_y = y + 88
-    card_width = 190
-    card_height = 245
-
-    lines.append(
-        f'<rect x="{card_x}" y="{card_y}" '
-        f'width="{card_width}" '
-        f'height="{card_height}" '
-        f'rx="10" '
-        f'fill="#161b22" '
-        f'stroke="#30363d"/>'
-    )
-
-    highest = max(ratings)
-
-    first_rating = ratings[0]
-    latest_rating = ratings[-1]
-    rating_gain = latest_rating - first_rating
-
-    insights = [
-        (
-            "Highest Rating",
-            highest,
-            "#3fb950",
-        ),
-        (
-            "Latest Rating",
-            latest_rating,
-            "#58a6ff",
-        ),
-        (
-            "Rating Change",
-            f"{rating_gain:+d}",
-            "#a371f7",
-        ),
-    ]
-
-    for index, (
-        label,
-        value,
-        color,
-    ) in enumerate(insights):
-
-        iy = card_y + 48 + index * 62
-
-        lines.append(
-            svg_text(
-                card_x + 20,
-                iy,
-                label,
-                size=12,
-                color="#8b949e",
-            )
-        )
-
-        lines.append(
-            svg_text(
-                card_x + 20,
-                iy + 25,
-                value,
-                size=21,
-                color=color,
-                weight=600,
-            )
-        )
-
-    return lines
-
-
-# ============================================================
 # MAIN SVG
 # ============================================================
 
@@ -1174,7 +663,6 @@ def render_dashboard(
     profile: dict,
     solved: list[dict],
     submissions: list[dict],
-    problem_map: dict[tuple[str, str], dict],
 ) -> str:
 
     timezone = ZoneInfo(TIMEZONE)
@@ -1193,20 +681,11 @@ def render_dashboard(
         submissions
     )
 
-    patterns = pattern_counts(
-        solved,
-        problem_map,
-    )
-
-    difficulty = difficulty_data(
-        solved,
-        problem_map,
-    )
 
     solved_count = len(solved)
 
     WIDTH = 1500
-    HEIGHT = 950
+    HEIGHT = 560
 
     lines = [
         f'<svg xmlns="http://www.w3.org/2000/svg" '
@@ -1272,18 +751,6 @@ def render_dashboard(
         )
     )
 
-    lines.extend(
-        render_patterns(
-            patterns,
-            solved_count,
-        )
-    )
-
-    lines.extend(
-        render_difficulty(
-            difficulty,
-        )
-    )
 
     # Footer
     lines.append(
@@ -1321,22 +788,14 @@ def main() -> None:
     print("Fetching rating history...")
     rating_history = fetch_rating_history()
 
-    print("Fetching problem metadata...")
-    problemset = fetch_problemset()
-
     solved = unique_solved_problems(
         submissions
-    )
-
-    problem_map = build_problem_map(
-        problemset
     )
 
     dashboard = render_dashboard(
         profile,
         solved,
         submissions,
-        problem_map,
     )
 
     OUTPUT.parent.mkdir(
@@ -1361,7 +820,6 @@ def main() -> None:
     print(f"Problems solved: {len(solved)}")
     print(f"Submissions fetched: {len(submissions)}")
     print(f"Rating history entries: {len(rating_history)}")
-    print(f"Problem metadata entries: {len(problemset)}")
     print(f"Output: {OUTPUT}")
 
 
