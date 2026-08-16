@@ -22,6 +22,7 @@ This repository contains my solutions, practice progress, and Codeforces activit
 | [1899A — Game with Integers](https://codeforces.com/problemset/problem/1899/A) | [View Solution](800-level/Game%20with%20Integers.py) |
 | [1896A — Jagged Swaps](https://codeforces.com/problemset/problem/1896/A) | [View Solution](800-level/Jagged%20Swaps.py) |
 | [1900A — Cover in Water](https://codeforces.com/problemset/problem/1900/A) | [View Solution](800-level/Cover%20in%20Water.py) |
+| [1890A — Doremy's Paint 3](https://codeforces.com/problemset/problem/1890/A) | [View Solution](800-level/Doremy%27s%20Paint%203.py) |
 
 New rating sections will be added as I progress through higher difficulty levels.
 
