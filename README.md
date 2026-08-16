@@ -34,8 +34,6 @@ New rating sections will be added as I progress through higher difficulty levels
 </div>
 
 
-### Codeforces Analytics
-
 <div align="center">
 
 [![Codeforces Analytics](assets/codeforces-analytics.svg)](https://codeforces.com/profile/ashcodes._)
