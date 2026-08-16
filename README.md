@@ -2,20 +2,14 @@
 
 # Data Structures & Algorithms
 
-My growing collection of Codeforces solutions while learning competitive programming with the TLE Eliminators CP-31 Sheet.
-
-[![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
-[![Codeforces](https://img.shields.io/badge/Codeforces-ashcodes._-1F8ACB?style=flat&logo=codeforces&logoColor=white)](https://codeforces.com/profile/ashcodes._)
-[![CP-31 Sheet](https://img.shields.io/badge/Practice-CP--31-2EA44F?style=flat)](https://www.tle-eliminators.com/cp-sheet)
-
-</div>
+A personal record of my competitive programming journey, where I solve Codeforces problems in Python and build consistency through structured practice.
 
 ## About
 
-I am building consistency in competitive programming by solving Codeforces problems and strengthening my problem-solving fundamentals. Solutions are organised by problem rating and written in Python for quick revision and practice.
+This repository contains my solutions, practice progress, and Codeforces activity as I work through different problem ratings. I use it to track what I have solved, revisit patterns, and gradually move towards more challenging problems.
 
 - **Codeforces:** [ashcodes._](https://codeforces.com/profile/ashcodes._)
-- **Practice Sheet:** [TLE Eliminators CP-31](https://www.tle-eliminators.com/cp-sheet)
+- **Practice:** [TLE Eliminators CP-31 Sheet](https://www.tle-eliminators.com/cp-sheet)
 
 ## Progress
 
