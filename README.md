@@ -23,6 +23,7 @@ This repository contains my solutions, practice progress, and Codeforces activit
 | [1896A — Jagged Swaps](https://codeforces.com/problemset/problem/1896/A) | [View Solution](800-level/Jagged%20Swaps.py) |
 | [1900A — Cover in Water](https://codeforces.com/problemset/problem/1900/A) | [View Solution](800-level/Cover%20in%20Water.py) |
 | [1890A — Doremy's Paint 3](https://codeforces.com/problemset/problem/1890/A) | [View Solution](800-level/Doremy%27s%20Paint%203.py) |
+| [1881A — Don't Try to Count](https://codeforces.com/problemset/problem/1881/A) | [View Solution](800-level/1881A_Dont_Try_to_Count.py) |
 
 New rating sections will be added as I progress through higher difficulty levels.
 
