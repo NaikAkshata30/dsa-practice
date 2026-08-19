@@ -24,6 +24,9 @@ This repository contains my solutions, practice progress, and Codeforces activit
 | [1900A — Cover in Water](https://codeforces.com/problemset/problem/1900/A) | [View Solution](800-level/Cover%20in%20Water.py) |
 | [1890A — Doremy's Paint 3](https://codeforces.com/problemset/problem/1890/A) | [View Solution](800-level/Doremy%27s%20Paint%203.py) |
 | [1881A — Don't Try to Count](https://codeforces.com/problemset/problem/1881/A) | [View Solution](800-level/1881A_Dont_Try_to_Count.py) |
+| [1696A — How Much Does Daytona Cost](https://codeforces.com/problemset/problem/1696/A) | [View Solution](800-level/How%20Much%20Does%20Daytona%20Cost.py) |
+| [1829A — Goals of Victory](https://codeforces.com/problemset/problem/1829/A) | [View Solution](800-level/Goals%20of%20Victory.py) |
+| [1866A — Ambitious Kid](https://codeforces.com/problemset/problem/1866/A) | [View Solution](800-level/Ambitious%20Kid.py) |
 
 New rating sections will be added as I progress through higher difficulty levels.
 
