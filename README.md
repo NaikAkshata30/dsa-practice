@@ -27,6 +27,8 @@ This repository contains my solutions, practice progress, and Codeforces activit
 | [1696A — How Much Does Daytona Cost](https://codeforces.com/problemset/problem/1696/A) | [View Solution](800-level/How%20Much%20Does%20Daytona%20Cost.py) |
 | [1829A — Goals of Victory](https://codeforces.com/problemset/problem/1829/A) | [View Solution](800-level/Goals%20of%20Victory.py) |
 | [1866A — Ambitious Kid](https://codeforces.com/problemset/problem/1866/A) | [View Solution](800-level/Ambitious%20Kid.py) |
+| [1873C — Target Practice](https://codeforces.com/problemset/problem/1873/C) | [View Solution](800-level/Target%20Practice.py) |
+| [1862B — Sequence Game](https://codeforces.com/problemset/problem/1862/B) | [View Solution](800-level/Sequence%20Game.py) |
 
 New rating sections will be added as I progress through higher difficulty levels.
 
