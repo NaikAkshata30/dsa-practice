@@ -70,9 +70,6 @@
 <text class="label" x="25" y="117">Mon</text>
 <text class="label" x="25" y="149">Wed</text>
 <text class="label" x="25" y="181">Fri</text>
-<rect class="cell" x="70" y="92" width="12" height="12" rx="3" fill="#161b22">
-<title>Aug 24, 2025 · 0 problems solved</title>
-</rect>
 <rect class="cell" x="70" y="108" width="12" height="12" rx="3" fill="#161b22">
 <title>Aug 25, 2025 · 0 problems solved</title>
 </rect>
@@ -1172,6 +1169,9 @@
 </rect>
 <rect class="cell" x="902" y="92" width="12" height="12" rx="3" fill="#161b22">
 <title>Aug 23, 2026 · 0 problems solved</title>
+</rect>
+<rect class="cell" x="902" y="108" width="12" height="12" rx="3" fill="#161b22">
+<title>Aug 24, 2026 · 0 problems solved</title>
 </rect>
 <rect x="24" y="220" width="158" height="66" rx="10" fill="#161b22" stroke="#30363d"/>
 <text class="stat-value" x="38" y="247">14</text>
