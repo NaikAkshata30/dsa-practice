@@ -10,13 +10,13 @@ ROOT = Path(__file__).resolve().parent.parent
 README = ROOT / "README.md"
 HEADER = re.compile(r"^#\s*Codeforces:\s*(?:(\d+[A-Z]\d*)\s*-\s*)?(.+?)\s*$", re.I)
 DIR = re.compile(r"^(\d+)-level$")
-MARKERS = {name: (f"<!-- AUTO:{name.upper()}:START -->", f"<!-- AUTO:{name.upper()}:END -->") for name in ("snapshot", "difficulty", "problems", "patterns")}
+MARKERS = {name: (f"<!-- AUTO:{name.upper()}:START -->", f"<!-- AUTO:{name.upper()}:END -->") for name in ("problems", "patterns")}
 PATTERNS = {
- "1903A":"Sorting / Observation","339A":"Strings / Sorting","1901A":"Greedy / Gaps","71A":"Strings",
- "1899A":"Math / Games","1896A":"Invariant / Ordering","1900A":"Greedy / Strings","1890A":"Frequency Counting",
- "1881A":"Strings / Simulation","1696A":"Membership Check","1829A":"Math","1866A":"Greedy / Math",
- "1873C":"Grid / Simulation","1862B":"Constructive Algorithms","1858A":"Math / Games",
- "1859A":"Constructive Algorithms","1857A":"Parity / Math",
+ "1903A":"Greedy & ordering","1901A":"Greedy & ordering","1900A":"Greedy & ordering","1896A":"Greedy & ordering",
+ "339A":"Strings","71A":"Strings","1881A":"Strings",
+ "1899A":"Math & games","1829A":"Math & games","1866A":"Math & games","1858A":"Math & games","1857A":"Math & games",
+ "1890A":"Frequency & constructive","1862B":"Frequency & constructive","1859A":"Frequency & constructive",
+ "1696A":"Membership check","1873C":"Grid simulation",
 }
 
 def discover():
@@ -66,7 +66,7 @@ def replace(content,name,value):
     return updated
 def main():
     items=discover(); content=README.read_text(encoding="utf-8")
-    for name,renderer in (("snapshot",snapshot),("difficulty",difficulty),("problems",problems),("patterns",patterns)): content=replace(content,name,renderer(items))
+    for name,renderer in (("patterns",patterns),("problems",problems)): content=replace(content,name,renderer(items))
     README.write_text(content,encoding="utf-8",newline="\n")
     print(f"README refreshed from {len(items)} solutions across {len({p['rating'] for p in items})} rating level(s).")
 if __name__ == "__main__": main()
