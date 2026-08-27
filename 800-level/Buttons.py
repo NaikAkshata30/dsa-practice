@@ -1,4 +1,4 @@
-# Codeforces: A. Buttons
+# Codeforces: 1858A - Buttons
 # Problem Description: Determine whether Anna or Katie wins a game where each player
 # can press their own buttons and both can press the shared buttons.
 # Idea: If the number of shared buttons is odd, Anna gets the extra turn from them.

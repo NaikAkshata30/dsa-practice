@@ -5,8 +5,9 @@ on:
     branches:
       - main
     paths:
-      - "800-level/**"
+      - "*-level/**"
       - "scripts/**"
+      - "README.md"
       - ".github/workflows/update-dsa-dashboard.yml"
 
   schedule:
@@ -18,9 +19,14 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: dsa-dashboard-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   update-dashboard:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Checkout repository
@@ -31,17 +37,18 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Refresh repository index
+        run: python scripts/generate_readme.py
+
       - name: Generate activity heatmap
-        run: |
-          python scripts/generate_activity.py
+        run: python scripts/generate_activity.py
 
       - name: Generate Codeforces analytics
-        run: |
-          python scripts/generate_dashboard.py
+        run: python scripts/generate_dashboard.py
 
       - name: Check generated files
         run: |
-          git status
+          git diff --check
           git diff --stat
 
       - name: Commit updated dashboard
@@ -49,7 +56,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add assets/*.svg
+          git add README.md assets/*.svg
 
           if git diff --cached --quiet; then
             echo "No changes to commit."

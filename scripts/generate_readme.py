@@ -1,212 +1,72 @@
 #!/usr/bin/env python3
-
-from pathlib import Path
+"""Refresh README sections from rating directories and solution headers."""
+from __future__ import annotations
 import re
-
+from collections import defaultdict
+from pathlib import Path
+from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parent.parent
 README = ROOT / "README.md"
-PROBLEMS_DIR = ROOT / "800-level"
+HEADER = re.compile(r"^#\s*Codeforces:\s*(?:(\d+[A-Z]\d*)\s*-\s*)?(.+?)\s*$", re.I)
+DIR = re.compile(r"^(\d+)-level$")
+MARKERS = {name: (f"<!-- AUTO:{name.upper()}:START -->", f"<!-- AUTO:{name.upper()}:END -->") for name in ("snapshot", "difficulty", "problems", "patterns")}
+PATTERNS = {
+ "1903A":"Sorting / Observation","339A":"Strings / Sorting","1901A":"Greedy / Gaps","71A":"Strings",
+ "1899A":"Math / Games","1896A":"Invariant / Ordering","1900A":"Greedy / Strings","1890A":"Frequency Counting",
+ "1881A":"Strings / Simulation","1696A":"Membership Check","1829A":"Math","1866A":"Greedy / Math",
+ "1873C":"Grid / Simulation","1862B":"Constructive Algorithms","1858A":"Math / Games",
+ "1859A":"Constructive Algorithms","1857A":"Parity / Math",
+}
 
+def discover():
+    result = []
+    for directory in ROOT.iterdir():
+        matched = DIR.match(directory.name) if directory.is_dir() else None
+        if not matched: continue
+        for path in directory.glob("*.py"):
+            header = next((HEADER.match(x) for x in path.read_text(encoding="utf-8-sig").splitlines()[:8] if HEADER.match(x)), None)
+            if not header or not header.group(1): raise ValueError(f"Missing Codeforces ID in {path.relative_to(ROOT)}")
+            pid, title = header.group(1).upper(), header.group(2).strip()
+            contest = re.match(r"\d+", pid).group()
+            result.append(dict(id=pid,title=title,rating=int(matched.group(1)),pattern=PATTERNS.get(pid,"To classify"),
+                problem=f"https://codeforces.com/problemset/problem/{contest}/{pid[len(contest):]}",
+                solution=quote(path.relative_to(ROOT).as_posix(), safe="/")))
+    return sorted(result, key=lambda x:(x["rating"],x["id"]))
 
-SNAPSHOT_START = "<!-- AUTO:SNAPSHOT:START -->"
-SNAPSHOT_END = "<!-- AUTO:SNAPSHOT:END -->"
-
-PROBLEMS_START = "<!-- AUTO:PROBLEMS:START -->"
-PROBLEMS_END = "<!-- AUTO:PROBLEMS:END -->"
-
-
-def get_problem_files():
-    """Return all Python solution files from the 800-level folder."""
-
-    if not PROBLEMS_DIR.exists():
-        return []
-
-    return sorted(
-        PROBLEMS_DIR.glob("*.py"),
-        key=lambda path: path.name.lower(),
-    )
-
-
-def extract_problem_info(file_path):
-    """
-    Extract the Codeforces problem number and title
-    from a filename.
-
-    Expected examples:
-
-        71A - Way Too Long Words.py
-        339A - Helpful Maths.py
-        1903A - Halloumi Boxes.py
-    """
-
-    name = file_path.stem
-
-    match = re.match(
-        r"^(\d+[A-Z])\s*[-—]\s*(.+)$",
-        name,
-    )
-
-    if match:
-        problem_id = match.group(1)
-        title = match.group(2).strip()
-    else:
-        problem_id = name
-        title = name
-
-    return problem_id, title
-
-
-def codeforces_url(problem_id):
-    """Build the Codeforces problem URL."""
-
-    number = re.match(r"(\d+)", problem_id)
-
-    if not number:
-        return None
-
-    contest_id = number.group(1)
-
-    return (
-        f"https://codeforces.com/problemset/problem/"
-        f"{contest_id}/{problem_id[len(contest_id):]}"
-    )
-
-
-def github_solution_url(file_path):
-    """Build a relative GitHub/Markdown link to the solution."""
-
-    relative = file_path.relative_to(ROOT)
-
-    # Convert Windows backslashes to URL-style slashes.
-    return str(relative).replace("\\", "/")
-
-
-def generate_snapshot(problem_count):
-    """Generate the automatic journey snapshot."""
-
-    if problem_count == 0:
-        level = "—"
-    else:
-        level = "800"
-
-    return f"""| Problems Solved | Practice Level | Language |
-|:---:|:---:|:---:|
-| **{problem_count}** | **{level}** | **Python** |"""
-
-
-def generate_problem_table(files):
-    """Generate the Problems table."""
-
-    rows = [
-        "| Problem | Solution |",
-        "|---|:---:|",
-    ]
-
-    for file_path in files:
-
-        problem_id, title = extract_problem_info(file_path)
-
-        problem_url = codeforces_url(problem_id)
-
-        solution_url = github_solution_url(file_path)
-
-        if problem_url:
-            problem_text = (
-                f"[{problem_id} — {title}]"
-                f"({problem_url})"
-            )
-        else:
-            problem_text = f"{problem_id} — {title}"
-
-        rows.append(
-            f"| {problem_text} | "
-            f"[Python]({solution_url}) |"
-        )
-
+def problem_link(p): return f'[{p["id"]} — {p["title"]}]({p["problem"]})'
+def snapshot(items):
+    ratings={p["rating"] for p in items}
+    return "| Repository metric | Current value |\n|:--|--:|\n"+f"| Solution files | **{len(items)}** |\n| Highest difficulty represented | **{max(ratings) if ratings else '—'}** |\n| Difficulty levels represented | **{len(ratings)}** |\n| Primary language | **Python** |\n| Practice track | **TLE Eliminators CP-31** |"
+def difficulty(items):
+    counts=defaultdict(int)
+    for p in items: counts[p["rating"]]+=1
+    maximum=max(counts.values(),default=1); rows=["| Rating | Relative volume | Solutions |","|--:|:--|--:|"]
+    for rating,count in sorted(counts.items()):
+        filled=round(16*count/maximum); rows.append(f"| **{rating}** | `{'█'*filled}{'░'*(16-filled)}` | **{count}** |")
     return "\n".join(rows)
-
-
-def replace_section(
-    content,
-    start_marker,
-    end_marker,
-    replacement,
-):
-    """Replace an automatically generated README section."""
-
-    pattern = (
-        re.escape(start_marker)
-        + r".*?"
-        + re.escape(end_marker)
-    )
-
-    new_section = (
-        start_marker
-        + "\n"
-        + replacement
-        + "\n"
-        + end_marker
-    )
-
-    updated, count = re.subn(
-        pattern,
-        new_section,
-        content,
-        flags=re.DOTALL,
-    )
-
-    if count == 0:
-        raise RuntimeError(
-            f"Could not find README markers:\n"
-            f"{start_marker}\n"
-            f"{end_marker}"
-        )
-
+def problems(items):
+    groups=defaultdict(list)
+    for p in items: groups[p["rating"]].append(p)
+    output=[]
+    for rating,group in sorted(groups.items()):
+        rows=[f"### {rating} rated","","| # | Problem | Primary pattern | Solution |","|--:|:--|:--|:--:|"]
+        rows += [f'| {i} | {problem_link(p)} | {p["pattern"]} | [Python]({p["solution"]}) |' for i,p in enumerate(group,1)]
+        output.append("\n".join(rows))
+    return "\n\n".join(output)
+def patterns(items):
+    groups=defaultdict(list)
+    for p in items: groups[p["pattern"]].append(p)
+    rows=["| Primary pattern | Problems |","|:--|:--|"]
+    for pattern,group in sorted(groups.items()): rows.append(f"| **{pattern}** | "+" · ".join(f'{problem_link(p)} ([code]({p["solution"]}))' for p in group)+" |")
+    return "\n".join(rows)
+def replace(content,name,value):
+    start,end=MARKERS[name]; updated,count=re.subn(re.escape(start)+r".*?"+re.escape(end),f"{start}\n{value}\n{end}",content,flags=re.S)
+    if count != 1: raise RuntimeError(f"Expected one {name} marker pair; found {count}")
     return updated
-
-
 def main():
-
-    if not README.exists():
-        raise FileNotFoundError(
-            "README.md was not found."
-        )
-
-    files = get_problem_files()
-
-    problem_count = len(files)
-
-    content = README.read_text(
-        encoding="utf-8"
-    )
-
-    # Update Journey Snapshot
-    content = replace_section(
-        content,
-        SNAPSHOT_START,
-        SNAPSHOT_END,
-        generate_snapshot(problem_count),
-    )
-
-    # Update Problems table
-    content = replace_section(
-        content,
-        PROBLEMS_START,
-        PROBLEMS_END,
-        generate_problem_table(files),
-    )
-
-    README.write_text(
-        content,
-        encoding="utf-8",
-        newline="\n",
-    )
-
-    print("README updated successfully.")
-    print(f"Problems found: {problem_count}")
-    print(f"README: {README}")
-
-
-if __name__ == "__main__":
-    main()
+    items=discover(); content=README.read_text(encoding="utf-8")
+    for name,renderer in (("snapshot",snapshot),("difficulty",difficulty),("problems",problems),("patterns",patterns)): content=replace(content,name,renderer(items))
+    README.write_text(content,encoding="utf-8",newline="\n")
+    print(f"README refreshed from {len(items)} solutions across {len({p['rating'] for p in items})} rating level(s).")
+if __name__ == "__main__": main()

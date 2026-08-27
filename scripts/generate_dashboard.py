@@ -440,55 +440,31 @@ def render_overview(
             )
         )
 
-    # Decorative circular chart area
+    # Provenance callout (all displayed values come from public API data).
     cx = x + 530
     cy = y + 205
 
     lines.append(
-        f'<circle cx="{cx}" cy="{cy}" r="82" '
-        f'fill="#0d1117" '
-        f'stroke="#30363d" stroke-width="2"/>'
+        f'<rect x="{cx - 92}" y="{cy - 66}" width="184" height="132" '
+        f'rx="16" fill="#161b22" stroke="#30363d"/>'
     )
-
-    bar_values = [
-        (35, "#f2cc60"),
-        (58, "#58a6ff"),
-        (45, "#f85149"),
-    ]
-
-    bar_width = 26
-    gap = 15
-
-    start_x = cx - (
-        (len(bar_values) * bar_width)
-        + ((len(bar_values) - 1) * gap)
-    ) / 2
-
-    for i, (bar_height, color) in enumerate(bar_values):
-
-        bx = start_x + i * (
-            bar_width + gap
-        )
-
-        by = cy + 35 - bar_height
-
-        lines.append(
-            f'<rect x="{bx}" y="{by}" '
-            f'width="{bar_width}" '
-            f'height="{bar_height}" '
-            f'rx="7" fill="{color}"/>'
-        )
 
     lines.append(
         svg_text(
             cx,
-            y + 340,
-            f"@{HANDLE}",
-            size=14,
-            color="#8b949e",
+            cy - 18,
+            "PUBLIC API",
+            size=13,
+            color="#3fb950",
+            weight=700,
             anchor="middle",
         )
     )
+
+    lines.append(svg_text(cx, cy + 12, "Verified profile data", size=13,
+                          color="#f0f6fc", weight=600, anchor="middle"))
+    lines.append(svg_text(cx, cy + 38, f"@{HANDLE}", size=12,
+                          color="#8b949e", anchor="middle"))
 
     return lines
 
