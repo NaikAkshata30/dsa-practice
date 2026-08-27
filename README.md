@@ -4,14 +4,7 @@ A personal record of my competitive programming journey, where I solve Codeforce
 
 ## About
 
-This repository contains my Codeforces solutions, practice progress, reusable problem-solving patterns, and activity tracking.
-
-I organize solutions by difficulty and use the repository to:
-
-- Practice competitive programming consistently
-- Revisit common problem-solving patterns
-- Track my progress across Codeforces ratings
-- Build a collection of solutions for future revision
+This repository contains my solutions, practice progress, and Codeforces activity as I work through different problem ratings. I use it to track what I have solved, revisit patterns, and gradually move towards more challenging problems.
 
 - **Codeforces:** [ashcodes._](https://codeforces.com/profile/ashcodes._)
 - **Practice:** [TLE Eliminators CP-31 Sheet](https://www.tle-eliminators.com/cp-sheet)
@@ -38,8 +31,9 @@ I organize solutions by difficulty and use the repository to:
 | [1866A — Ambitious Kid](https://codeforces.com/problemset/problem/1866/A) | [View Solution](800-level/Ambitious%20Kid.py) |
 | [1873C — Target Practice](https://codeforces.com/problemset/problem/1873/C) | [View Solution](800-level/Target%20Practice.py) |
 | [1862B — Sequence Game](https://codeforces.com/problemset/problem/1862/B) | [View Solution](800-level/Sequence%20Game.py) |
-| A — Buttons | [View Solution](800-level/Buttons.py) |
+| [1858A — Buttons](https://codeforces.com/contest/1858/problem/A) | [View Solution](800-level/Buttons.py) |
 | [1859A — United We Stand](https://codeforces.com/problemset/problem/1859/A) | [View Solution](800-level/United%20We%20Stand.py) |
+| [1857A — Array Coloring](https://codeforces.com/problemset/problem/1857/A) | [View Solution](800-level/Array%20Coloring.py) |
 
 New rating sections will be added as I progress through higher difficulty levels.
 
