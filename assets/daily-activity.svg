@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="920" height="335" viewBox="0 0 920 335" role="img" aria-labelledby="title description">
 <title id="title">ashcodes._ DSA solving activity</title>
-<desc id="description">17 problems solved across 11 active days in the last year.</desc>
+<desc id="description">19 problems solved across 12 active days in the last year.</desc>
 <style>
 
         text {
@@ -1173,23 +1173,24 @@
 <title>Aug 27, 2026 · 1 problem solved</title>
 </rect>
 <text class="count" x="908" y="164.7" text-anchor="middle">1</text>
-<rect class="cell" x="902" y="172" width="12" height="12" rx="3" fill="#161b22">
-<title>Aug 28, 2026 · 0 problems solved</title>
+<rect class="cell" x="902" y="172" width="12" height="12" rx="3" fill="#006d32">
+<title>Aug 28, 2026 · 2 problems solved</title>
 </rect>
+<text class="count" x="908" y="180.7" text-anchor="middle">2</text>
 <rect x="24" y="220" width="158" height="66" rx="10" fill="#161b22" stroke="#30363d"/>
-<text class="stat-value" x="38" y="247">17</text>
+<text class="stat-value" x="38" y="247">19</text>
 <text class="stat-label" x="38" y="266">Problems Solved</text>
 <rect x="200" y="220" width="158" height="66" rx="10" fill="#161b22" stroke="#30363d"/>
-<text class="stat-value" x="214" y="247">11</text>
+<text class="stat-value" x="214" y="247">12</text>
 <text class="stat-label" x="214" y="266">Active Days</text>
 <rect x="376" y="220" width="158" height="66" rx="10" fill="#161b22" stroke="#30363d"/>
 <text class="stat-value" x="390" y="247">8 days</text>
 <text class="stat-label" x="390" y="266">Best Streak</text>
 <rect x="552" y="220" width="158" height="66" rx="10" fill="#161b22" stroke="#30363d"/>
-<text class="stat-value" x="566" y="247">17</text>
+<text class="stat-value" x="566" y="247">19</text>
 <text class="stat-label" x="566" y="266">Last 30 Days</text>
 <rect x="728" y="220" width="158" height="66" rx="10" fill="#161b22" stroke="#30363d"/>
-<text class="stat-value" x="742" y="247">17</text>
+<text class="stat-value" x="742" y="247">19</text>
 <text class="stat-label" x="742" y="266">Last 12 Months</text>
 <text class="label" x="24" y="312">First accepted solve · IST (Asia/Kolkata)</text>
 <text class="label" x="652" y="314">Less</text>
