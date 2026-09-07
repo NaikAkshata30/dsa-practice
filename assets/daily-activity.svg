@@ -55,7 +55,6 @@
 <text class="title" x="24" y="30">Daily Solving Activity</text>
 <text class="subtitle" x="24" y="52">Codeforces · @ashcodes._</text>
 <text class="subtitle" x="896" y="30" text-anchor="end">DSA Practice</text>
-<text class="label" x="70" y="78">Sep</text>
 <text class="label" x="118" y="78">Oct</text>
 <text class="label" x="182" y="78">Nov</text>
 <text class="label" x="262" y="78">Dec</text>
@@ -71,9 +70,6 @@
 <text class="label" x="25" y="117">Mon</text>
 <text class="label" x="25" y="149">Wed</text>
 <text class="label" x="25" y="181">Fri</text>
-<rect class="cell" x="70" y="92" width="12" height="12" rx="3" fill="#161b22">
-<title>Sep 07, 2025 · 0 problems solved</title>
-</rect>
 <rect class="cell" x="70" y="108" width="12" height="12" rx="3" fill="#161b22">
 <title>Sep 08, 2025 · 0 problems solved</title>
 </rect>
@@ -1179,6 +1175,9 @@
 </rect>
 <rect class="cell" x="902" y="92" width="12" height="12" rx="3" fill="#161b22">
 <title>Sep 06, 2026 · 0 problems solved</title>
+</rect>
+<rect class="cell" x="902" y="108" width="12" height="12" rx="3" fill="#161b22">
+<title>Sep 07, 2026 · 0 problems solved</title>
 </rect>
 <rect x="24" y="220" width="158" height="66" rx="10" fill="#161b22" stroke="#30363d"/>
 <text class="stat-value" x="38" y="247">21</text>
