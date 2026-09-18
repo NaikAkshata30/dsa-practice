@@ -11,8 +11,8 @@ on:
       - ".github/workflows/update-dsa-dashboard.yml"
 
   schedule:
-    # Runs every day at 00:30 UTC = 06:00 AM IST
-    - cron: "30 0 * * *"
+    # Refresh public Codeforces progress every six hours.
+    - cron: "30 */6 * * *"
 
   workflow_dispatch:
 

@@ -71,13 +71,11 @@ Problems are grouped by their main reusable idea. Each entry links to the Codefo
 
 ## Progress Visuals
 
-The analytics below use public Codeforces data and refresh automatically.
+The dashboard below uses public Codeforces data and refreshes automatically. It combines solving consistency, recent submissions, topic coverage, and latest accepted problems in one view.
 
 <div align="center">
 
 [![Codeforces practice analytics](assets/codeforces-analytics.svg)](https://codeforces.com/profile/ashcodes._)
-
-[![Codeforces daily activity](assets/daily-activity.svg)](https://codeforces.com/profile/ashcodes._)
 
 </div>
 
