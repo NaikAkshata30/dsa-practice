@@ -16,7 +16,10 @@ PATTERNS = {
  "339A":"Strings","71A":"Strings","1881A":"Strings",
  "1899A":"Math & games","1829A":"Math & games","1866A":"Math & games","1858A":"Math & games","1857A":"Math & games",
  "1890A":"Frequency & constructive","1862B":"Frequency & constructive","1859A":"Frequency & constructive",
- "1696A":"Membership check","1873C":"Grid simulation",
+ "1878A":"Membership check","1873C":"Grid simulation",
+ "1814A":"Math & games","1853A":"Greedy & ordering","1845A":"Frequency & constructive",
+ "1837A":"Math & games","1766A":"Math & games","1777A":"Greedy & ordering",
+ "1829B":"Arrays & scanning","1877A":"Math & games",
 }
 
 def discover():

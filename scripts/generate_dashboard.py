@@ -358,114 +358,26 @@ def render_overview(
     solved_count: int,
     current_streak: int,
     best_streak: int,
+    active_days: int,
+    last_30_days: int,
 ) -> list[str]:
-
     lines = []
-
-    x = 40
-    y = 110
-    width = 660
-    height = 385
-
-    lines.append(
-        rounded_card(
-            x,
-            y,
-            width,
-            height,
-        )
-    )
-
-    lines.append(
-        section_title(
-            x + 28,
-            y + 48,
-            "Overview",
-        )
-    )
-
-    rating = profile.get("rating", "Unrated")
-    rank = profile.get("rank", "Unrated")
-    contribution = profile.get(
-        "contribution",
-        0,
-    )
-
-    stats = [
-        ("Problems Solved", solved_count, "#3fb950"),
-        ("Current Streak", f"{current_streak} days", "#ff7b72"),
-        ("Max Streak", f"{best_streak} days", "#a371f7"),
-        ("Rating", rating, "#f2cc60"),
-        ("Rank", rank, "#58a6ff"),
-        ("Contribution", contribution, "#58a6ff"),
+    cards = [
+        ("UNIQUE SOLVES", solved_count, "first accepted problems"),
+        ("ACTIVE DAYS", active_days, "across all recorded time"),
+        ("BEST STREAK", f"{best_streak}d", f"current run: {current_streak}d"),
+        ("LAST 30 DAYS", last_30_days, "new problems cleared"),
     ]
-
-    start_y = y + 105
-
-    for index, (label, value, color) in enumerate(stats):
-
-        row_y = start_y + index * 43
-
+    for index, (label, value, note) in enumerate(cards):
+        x = 40 + index * 365
+        y = 108
         lines.append(
-            svg_text(
-                x + 30,
-                row_y,
-                "●",
-                size=14,
-                color=color,
-                weight=700,
-            )
+            f'<rect x="{x}" y="{y}" width="335" height="142" rx="18" '
+            f'fill="url(#card{index % 2})" stroke="#2d3b52" stroke-width="1.2"/>'
         )
-
-        lines.append(
-            svg_text(
-                x + 55,
-                row_y,
-                f"{label}:",
-                size=15,
-                color="#8b949e",
-            )
-        )
-
-        lines.append(
-            svg_text(
-                x + 330,
-                row_y,
-                format_number(value)
-                if isinstance(value, int)
-                else value,
-                size=16,
-                color="#58a6ff",
-                weight=600,
-            )
-        )
-
-    # Provenance callout (all displayed values come from public API data).
-    cx = x + 530
-    cy = y + 205
-
-    lines.append(
-        f'<rect x="{cx - 92}" y="{cy - 66}" width="184" height="132" '
-        f'rx="16" fill="#161b22" stroke="#30363d"/>'
-    )
-
-    lines.append(
-        svg_text(
-            cx,
-            cy - 18,
-            "PUBLIC API",
-            size=13,
-            color="#3fb950",
-            weight=700,
-            anchor="middle",
-        )
-    )
-
-    lines.append(svg_text(cx, cy + 12, "Verified profile data", size=13,
-                          color="#f0f6fc", weight=600, anchor="middle"))
-    lines.append(svg_text(cx, cy + 38, f"@{HANDLE}", size=12,
-                          color="#8b949e", anchor="middle"))
-
+        lines.append(svg_text(x + 28, y + 38, label, 13, "#52e5ff", 700))
+        lines.append(svg_text(x + 28, y + 91, value, 38, "#ffffff", 700))
+        lines.append(svg_text(x + 28, y + 121, note, 12, "#8fb4d8"))
     return lines
 
 
@@ -480,10 +392,10 @@ def render_activity(
 
     lines = []
 
-    x = 720
-    y = 110
-    width = 740
-    height = 385
+    x = 40
+    y = 280
+    width = 1420
+    height = 350
 
     lines.append(
         rounded_card(
@@ -517,8 +429,8 @@ def render_activity(
 
     chart_x = x + 75
     chart_y = y + 95
-    chart_width = 600
-    chart_height = 220
+    chart_width = 1260
+    chart_height = 200
 
     # Grid lines
     for level in range(6):
@@ -581,7 +493,7 @@ def render_activity(
             f'<rect x="{bx:.2f}" y="{by:.2f}" '
             f'width="{bar_width:.2f}" '
             f'height="{max(bar_height, 2):.2f}" '
-            f'rx="3" fill="#6e40c9">'
+            f'rx="3" fill="url(#activityBar)">'
             f'<title>{value} problem(s) solved on '
             f'{days[index].strftime("%b %d, %Y")}</title>'
             f'</rect>'
@@ -620,7 +532,7 @@ def render_activity(
     lines.append(
         svg_text(
             chart_x + chart_width / 2,
-            chart_y + chart_height + 55,
+            chart_y + chart_height + 42,
             "Last 30 Days",
             size=12,
             color="#8b949e",
@@ -657,11 +569,15 @@ def render_dashboard(
         submissions
     )
 
-
     solved_count = len(solved)
+    active_days = len(set(dates))
+    last_30_days = sum(
+        1 for solved_date in dates
+        if solved_date >= today - timedelta(days=29)
+    )
 
     WIDTH = 1500
-    HEIGHT = 560
+    HEIGHT = 660
 
     lines = [
         f'<svg xmlns="http://www.w3.org/2000/svg" '
@@ -674,6 +590,18 @@ def render_dashboard(
                             x2="1" y2="1">
                 <stop offset="0%" stop-color="#0d1117"/>
                 <stop offset="100%" stop-color="#090c10"/>
+            </linearGradient>
+            <linearGradient id="card0" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#102238"/>
+                <stop offset="100%" stop-color="#161b33"/>
+            </linearGradient>
+            <linearGradient id="card1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#12253a"/>
+                <stop offset="100%" stop-color="#1c1b3d"/>
+            </linearGradient>
+            <linearGradient id="activityBar" x1="0" y1="1" x2="0" y2="0">
+                <stop offset="0%" stop-color="#6d5dfc"/>
+                <stop offset="100%" stop-color="#35d5ed"/>
             </linearGradient>
         </defs>
         """,
@@ -717,6 +645,8 @@ def render_dashboard(
             solved_count,
             current_streak,
             best_streak,
+            active_days,
+            last_30_days,
         )
     )
 
@@ -724,20 +654,6 @@ def render_dashboard(
         render_activity(
             activity,
             today,
-        )
-    )
-
-
-    # Footer
-    lines.append(
-        svg_text(
-            WIDTH / 2,
-            HEIGHT - 28,
-            "Data fetched from Codeforces API • "
-            "Automatically generated",
-            size=12,
-            color="#8b949e",
-            anchor="middle",
         )
     )
 

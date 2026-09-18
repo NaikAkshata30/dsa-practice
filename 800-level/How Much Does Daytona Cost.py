@@ -1,4 +1,4 @@
-# Codeforces: 1696A - How Much Does Daytona Cost?
+# Codeforces: 1878A - How Much Does Daytona Cost?
 # Problem Description: Determine whether there exists a non-empty subsegment where k is the most common element.
 # Idea: A single occurrence of k forms a subsegment where k is the most common element, so it is enough to check whether k exists in the array.
 

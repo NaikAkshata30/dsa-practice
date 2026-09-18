@@ -40,6 +40,9 @@ jobs:
       - name: Refresh repository index
         run: python scripts/generate_readme.py
 
+      - name: Generate repository progress charts
+        run: python scripts/generate_repository_charts.py
+
       - name: Generate activity heatmap
         run: python scripts/generate_activity.py
 
