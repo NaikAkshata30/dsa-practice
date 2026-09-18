@@ -71,13 +71,9 @@ Problems are grouped by their main reusable idea. Each entry links to the Codefo
 
 ## Progress Visuals
 
-The first two charts are generated from the solution archive; the analytics dashboard uses public Codeforces data. All three refresh automatically.
+The analytics below use public Codeforces data and refresh automatically.
 
 <div align="center">
-
-![Difficulty ladder](assets/difficulty-ladder.svg)
-
-![Pattern coverage](assets/pattern-coverage.svg)
 
 [![Codeforces practice analytics](assets/codeforces-analytics.svg)](https://codeforces.com/profile/ashcodes._)
 
